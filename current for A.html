@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>A*</title>
+    <link rel="stylesheet" href="css for aaa.css">
+    <script src="mapEditing.js"></script>
+</head>
+
+<body>
+    <h2>A*</h2>
+    <hr>
+    <p><img src="cathi.jpg" alt="cat say hello" width="250" height="150"></p>
+
+    <div>Выберите размер карты n*n от 1 до 15:
+        <input id="mapSize" type="number" min="1" max="15" step="1">
+        <input type="button" value="Сгенерироват карту" onclick="makeMap()">
+        <p id="status"></p>
+        <div id="parent"></div>
+    </div>
+
+    <div>Нажмите для автоматической генерации лабиринта:
+        <input id="map-auto" type="button" value="Сгенерировать лабиринт автоматически">
+    </div>
+
+    <div>Выберите, что бы вы хотели изменить в лабиринте:
+        <select name="map-change">
+            <option>Ничего не менять</option>
+            <option onclick="changeStart()">Изменить начальную клетку</option>
+            <option onclick="changeFinish()">Изменить конечную клетку</option>
+            <option onclick="addWall()">Добавить преграды</option>
+            <option onclick="deleteWall()">Убрать преграды</option>
+        </select>
+    </div>
+
+    <input id="turn on" type="button" value="Запуск алгоритма">
+    </div>
+
+</body>
+
+</html>
